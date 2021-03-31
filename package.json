@@ -8,8 +8,9 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack serve --hot",
+    "prebuild": "rm -rf /dist",
     "build": "webpack",
-    "gh:pages": "gh-pages -d ./dist"
+    "postbuild": "gh-pages -d ./dist"
   },
   "devDependencies": {
     "css-loader": "5.1.3",
